@@ -1,0 +1,10 @@
+JDBC 
+----
+Java Database Connectivity 
+
+1. Load the driver 
+2. Create a connection 
+3. Prepare a Statement 
+4. Execute SQL Query 
+5. Process the Result 
+6. Close the connection & Statement 
