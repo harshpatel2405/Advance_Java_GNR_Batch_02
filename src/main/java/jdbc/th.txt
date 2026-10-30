@@ -8,3 +8,14 @@ Java Database Connectivity
 4. Execute SQL Query 
 5. Process the Result 
 6. Close the connection & Statement 
+
+
+create database java ;
+use java
+
+CREATE TABLE student (
+    id INT ,
+    name VARCHAR(50),
+    age INT,
+    email VARCHAR(100) UNIQUE
+);

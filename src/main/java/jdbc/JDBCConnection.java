@@ -5,17 +5,16 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-import com.mysql.cj.protocol.Resultset;
 
 public class JDBCConnection {
 	public static void main(String[] args) {
-		String url = "jdbc:mysql://localhost:3306/adv_java";
+		String url = "jdbc:mysql://localhost:3306/java";
 		String username = "root";
-		String password = "root";
+		String password = "root123";
 		try
 		{
 //			1. load the driver
-			Class.forName("com.mysql.cj.jdbc.driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			
 //			2. create a connection 
 			Connection con = DriverManager.getConnection(url , username , password);
@@ -31,7 +30,7 @@ public class JDBCConnection {
 			
 			while(rs.next())
 			{
-				System.out.println(rs.getInt("id"));
+				System.out.println(rs.getInt("id") + rs.getString("name") +rs.getInt("age") );
 			}
 			
 //			6 close the connection
